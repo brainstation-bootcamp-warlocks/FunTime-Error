@@ -1,0 +1,81 @@
+@use './global' as *;
+@use './queries' as *;
+
+.ourHeader{
+    display: flex;
+    justify-content: space-between;
+    background-color: $space;
+
+    &__nav-links{
+        background-color: $space;
+        height: auto;
+        display: flex;
+        padding: 1rem 1rem 0 1rem;
+
+        @include tablet{
+            padding: 0.5rem 1rem;
+        }
+
+        .nav-links__iss-logo{
+            height: 5vw;
+            width: 5vw;
+
+            @include tablet{
+                width: 2.5rem;
+                height: 2.5rem;
+                margin-top: 0.5rem;
+            }
+        }
+
+        .nav-links__index-page {
+            text-decoration: none;
+            color: $bright-light;
+            font-weight: 600;
+            font-size: 3vw;
+            padding: 1.5vw 0.5rem 0.5rem 0.5rem;
+
+            @include tablet{
+                font-size: 1.5rem;
+                padding-top: 1rem;
+            }
+        }
+
+        .nav-links__button {
+            background-color: $dark-nasa;
+            background-image: -webkit-linear-gradient(top, $nasa, $dark-nasa);
+            background-image: -moz-linear-gradient(top, $nasa, $dark-nasa);
+            background-image: -ms-linear-gradient(top, $nasa, $dark-nasa);
+            background-image: -o-linear-gradient(top, $nasa, $dark-nasa);
+            color: $bright-light;
+            border: $dark-nasa;
+            font-size: 0.75rem;
+            border-radius: 0.4rem;
+            padding: 0.5rem;
+            margin-top: 1vw;
+            height: 1.5rem;
+            text-decoration: none;
+
+            @include tablet{
+                font-size: 1rem;
+                height: 2rem;
+                margin: 0.75rem 0 0.25rem 0;
+            }
+        }
+
+        .nav-links__button:hover {
+            background: $bright-nasa;
+            text-decoration: none;
+        }
+    }
+
+    &__nasa-logo{
+        height: 5vw;
+        width: 5.25vw;
+        margin: 1rem;
+        
+        @include tablet{
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+}
