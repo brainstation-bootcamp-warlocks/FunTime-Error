@@ -1,0 +1,43 @@
+@use './queries' as *;
+
+// GLOBAL VARIABLE DECLARATION
+$space: #000000;
+$bright-light: #ffffff;
+$nasa: #3498DB;
+$dark-nasa: #2980B9;
+$bright-nasa: #3CB0FD;
+
+// IMPORTED FONT FACE
+@font-face {
+    font-family: 'AvenirNext LT Pro';
+    src: url('../../assets/fonts/AvenirNextLTPro-Bold.woff') format('woff'),
+         url('../../assets/fonts/AvenirNextLTPro-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: 'AvenirNext LT Pro';
+    src: url('../../assets/fonts/AvenirNextLTPro-Demi.woff') format('woff'),
+         url('../../assets/fonts/AvenirNextLTPro-Demi.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AvenirNext LT Pro';
+    src: url('../../assets/fonts/AvenirNextLTPro-Regular.woff') format('woff'),
+         url('../../assets/fonts/AvenirNextLTPro-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+// CREATING MY OWN DEFAULT BROWSER SETTINGS
+* {
+    font-family: 'AvenirNext LT Pro', serif;
+    box-sizing: border-box;
+    margin: 0;
+}
