@@ -1,0 +1,17 @@
+// MEDIA QUERIES BREAKPOINTS
+$tablet-lower-breakpoint: 768px;
+$desktop-lower-breakpoint: 1280px;
+
+// MEDIA QUERY FOR TABLET DESIGN
+@mixin tablet{
+    @media only screen and (min-width: $tablet-lower-breakpoint){
+        @content;
+    }
+}
+
+// MEDIA QUERY FOR DESKTOP DESIGN
+@mixin desktop{
+    @media only screen and (min-width: $desktop-lower-breakpoint){
+        @content;
+    }
+}
