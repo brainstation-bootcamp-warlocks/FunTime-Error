@@ -1,0 +1,127 @@
+@use './global' as *;
+@use './queries' as *;
+
+.hero__background-image{                    // BACKGROUND IMAGE
+    background-image: url(../../assets/images/astro.jpg);
+    width: 100%;
+    height: 50vw;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    @include desktop{
+        height: 40rem;
+    }
+
+    .hero__image-container{          //IMAGE CONTAINER
+        width: 12vw;
+        height: 8vw;
+        position: absolute;
+        top: 6.5vw;
+        left: 14vw;
+
+        @include tablet{
+        width: 12vw;
+        height: 8vw;
+        }
+
+        @include desktop{
+            width: 9.75rem;
+            height: 6.5rem;
+            top: 5rem;
+        }
+
+        .hero__image{                // IMAGE
+            height: 100%;
+            width: 100%;
+        }
+        
+        .image__rotate{
+
+            @keyframes rotate{
+                from{transform: rotate(0deg)}
+                to {transform: rotate(360deg)}
+            }
+            
+            animation: rotate 2.5s linear;
+        }
+    }
+
+    .hero__input-display{
+
+        .input-display__container{
+            color: $bright-light;
+            position: absolute;
+            left: 58.25vw;
+            top: 9vw;
+            font-size: 2.25vw;
+            font-weight: 600;
+
+            @include desktop{
+                top: 7rem;
+                font-size: 1.8rem;
+                padding-left: 1vw;
+                margin-top: -0.5vw;
+            }
+        }
+    }
+
+    .hero__title{                           // TITLE CONTAINER
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: rgba($space, 0.3);
+        width: 100%;
+        height: 50vw;
+        padding: 0 0 1rem 3.5vw;
+
+        @include tablet{
+            align-items: flex-start;
+            padding: 0 0 5vw 8vw;
+        }
+
+        @include desktop{
+            height: 40rem;
+            padding: 0 0 8rem 11vw;
+        }
+
+        .title__text{                      // TITLE
+            font-size: 5vw;
+            color: $bright-light;
+            font-weight: 600;
+
+            @include tablet{
+                font-size: 4vw;
+                width: 40vw;
+            }
+
+            @include desktop{
+                font-size: 3.5rem;
+                width: 35rem;
+            }
+        }
+    }
+
+    .hero__form-container{
+
+        .button{
+            border-radius: 0.4rem;
+            font-size: 3vw;
+            font-weight: 600;
+            color: $bright-light;
+            background-color: $space;
+            border: 0.25px solid rgba($bright-light, 0.25);
+            padding: 0.75rem 0.75rem 0.5rem 0.75rem;
+        
+            @include tablet{
+                font-size: 2vw;
+                font-weight: 600;
+            }
+        
+            @include desktop{
+                font-size: 1.75rem;
+            }
+        }
+    }
+}
