@@ -1,0 +1,21 @@
+@use './global' as *;
+@use './queries' as *;
+
+.ourFooter {
+    background-color: $space;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+
+    &__info{
+        color: $bright-light;
+        font-weight: 600;
+        font-size: 2.25vw;
+        padding: 2.5vw;
+
+        @include tablet{
+            font-size: 1.1rem;
+            padding: 1.25rem;
+        }
+    }
+}
